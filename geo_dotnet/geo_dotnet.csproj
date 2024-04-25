@@ -46,15 +46,168 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Admin\AddProjectDialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\Admin\AddProjectDialogForm.Designer.cs">
+      <DependentUpon>AddProjectDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\AllAdminform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\AllAdminform.Designer.cs">
+      <DependentUpon>AllAdminform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\EditUserDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\EditUserDialogForm.Designer.cs">
+      <DependentUpon>EditUserDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerMainForm.Designer.cs">
+      <DependentUpon>CustomerMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustProjForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustProjForm.Designer.cs">
+      <DependentUpon>CustProjForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trash\AdminPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="trash\AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\AdminsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\AdminsPanel.Designer.cs">
+      <DependentUpon>AdminsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trash\UserInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="trash\UserInfoControl.Designer.cs">
+      <DependentUpon>UserInfoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trash\UsersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="trash\UsersControl.Designer.cs">
+      <DependentUpon>UsersControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs" />
+    <Compile Include="Forms\Admin\AdminUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\AdminUserForm.Designer.cs">
+      <DependentUpon>AdminUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Admin\AdminMainProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\AdminMainProjectForm.Designer.cs">
+      <DependentUpon>AdminMainProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerProjDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\CustomerProjDForm.Designer.cs">
+      <DependentUpon>CustomerProjDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\EmployeeMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\EmployeeMainForm.Designer.cs">
+      <DependentUpon>EmployeeMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employee\ProgectsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employee\ProgectsForm.Designer.cs">
+      <DependentUpon>ProgectsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trash\ProjectsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trash\ProjectsForm.Designer.cs">
+      <DependentUpon>ProjectsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProDirector\ProDirectorMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProDirector\ProDirectorMainForm.Designer.cs">
+      <DependentUpon>ProDirectorMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\ProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\ProjectForm.Designer.cs">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Admin\AddProjectDialogForm.resx">
+      <DependentUpon>AddProjectDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\AllAdminform.resx">
+      <DependentUpon>AllAdminform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\EditUserDialogForm.resx">
+      <DependentUpon>EditUserDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerMainForm.resx">
+      <DependentUpon>CustomerMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustomerProjDForm.resx">
+      <DependentUpon>CustomerProjDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\CustProjForm.resx">
+      <DependentUpon>CustProjForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Employee\EmployeeMainForm.resx">
+      <DependentUpon>EmployeeMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProDirector\ProDirectorMainForm.resx">
+      <DependentUpon>ProDirectorMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trash\AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Admin\AdminsPanel.resx">
+      <DependentUpon>AdminsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trash\UserInfoControl.resx">
+      <DependentUpon>UserInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trash\UsersControl.resx">
+      <DependentUpon>UsersControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\AdminMainProjectForm.resx">
+      <DependentUpon>AdminMainProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\AdminUserForm.resx">
+      <DependentUpon>AdminUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,6 +229,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="trash\DB\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

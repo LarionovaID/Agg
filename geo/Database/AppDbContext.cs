@@ -26,16 +26,19 @@ namespace geo.Database
 		public DbSet<Picket> Pickets { get; set; }
 		public DbSet<Measurement> Measurements { get; set; }
 
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+		/*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			//optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=helloappdb;Trusted_Connection=True;");
-		}
+			optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=helloappdb;Trusted_Connection=True;");
+		}*/
+
 
 		public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
 		{
 			//Database.EnsureDeleted();
 			Database.EnsureCreated();
 		}
+
+
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
@@ -51,10 +54,16 @@ namespace geo.Database
 				new Role { Id = 1, Name = "admin" },
 				new Role { Id = 2, Name = "user" },
 			};
+			List<User> users = new()
+			{
+				new User { Id = 1, FIO = "admin", Login = "admin", Password = "admin", RoleId = 1 },
+			};
 
 
 			modelBuilder.Entity<Role>().HasData(roles);
-			
+			modelBuilder.Entity<User>().HasData(users);
+
+
 
 			return modelBuilder;
 		}

@@ -10,9 +10,23 @@ namespace geo_dotnet
 {
 	internal class Database
 	{
-		//Объявление соединения
-		static string connectionStr = "Data Source=DBSRV\\AG2023; Initial Catalog=LarionovaID1_107g2;Integrated Security=True";
-		SqlConnection sqlConnection = new SqlConnection(connectionStr);
+		// Объявление соединения
+		//public SqlConnection sqlConnection;
+
+		SqlConnection sqlConnection = new SqlConnection(@"Data Source=IRYSIK\SQLEXPRESS;Initial Catalog=GeoDb;Integrated Security=True");
+
+		public SqlConnection GetConnection(/*string serverName, string dbName*/)
+		{
+			/*
+			string _serverName = "IRYSIK\\SQLEXPRESS";
+			string _dbName = "GeoDb";
+
+			string connectionStr = $"Data Source={_serverName}; Initial Catalog={_dbName};Integrated Security=True";
+			sqlConnection = new SqlConnection(connectionStr);
+			*/
+
+			return sqlConnection;
+		}
 
 		public void OpenConnection()
 		{
@@ -30,9 +44,6 @@ namespace geo_dotnet
 			}
 		}
 
-		public SqlConnection GetConnection() 
-		{ 
-			return sqlConnection;
-		}
+
 	}
 }

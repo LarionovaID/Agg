@@ -135,7 +135,6 @@
 			Controls.Add(header1);
 			Name = "MeasurementsForm";
 			Text = "Measurements";
-			Load += this.MeasurementsForm_Load;
 			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();

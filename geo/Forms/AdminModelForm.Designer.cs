@@ -28,11 +28,14 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			components = new System.ComponentModel.Container();
 			header1 = new Controls.Header();
 			dataGridView1 = new DataGridView();
+			appDbContextBindingSource = new BindingSource(components);
 			btn_Save = new Button();
 			btn_Delete = new Button();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)appDbContextBindingSource).BeginInit();
 			SuspendLayout();
 			// 
 			// header1
@@ -50,6 +53,12 @@
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.Size = new Size(776, 318);
 			dataGridView1.TabIndex = 1;
+			dataGridView1.VirtualMode = true;
+			dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+			// 
+			// appDbContextBindingSource
+			// 
+			appDbContextBindingSource.DataSource = typeof(Database.AppDbContext);
 			// 
 			// btn_Save
 			// 
@@ -60,6 +69,7 @@
 			btn_Save.TabIndex = 2;
 			btn_Save.Text = "Сохранить";
 			btn_Save.UseVisualStyleBackColor = true;
+			btn_Save.Click += btn_Save_Click;
 			// 
 			// btn_Delete
 			// 
@@ -70,6 +80,7 @@
 			btn_Delete.TabIndex = 3;
 			btn_Delete.Text = "Удалить";
 			btn_Delete.UseVisualStyleBackColor = true;
+			btn_Delete.Click += btn_Delete_Click;
 			// 
 			// AdminModelForm
 			// 
@@ -82,7 +93,9 @@
 			Controls.Add(header1);
 			Name = "AdminModelForm";
 			Text = "AdminModelForm";
+			Load += AdminModelForm_Load;
 			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+			((System.ComponentModel.ISupportInitialize)appDbContextBindingSource).EndInit();
 			ResumeLayout(false);
 		}
 
@@ -92,5 +105,6 @@
 		private DataGridView dataGridView1;
 		private Button btn_Save;
 		private Button btn_Delete;
+		private BindingSource appDbContextBindingSource;
 	}
 }

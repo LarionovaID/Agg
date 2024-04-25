@@ -28,7 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			tb_db = new TextBox();
+			tb_dbServer = new TextBox();
 			lbl_db = new Label();
 			lbl_Login = new Label();
 			tb_Login = new TextBox();
@@ -36,15 +36,15 @@
 			tb_Password = new TextBox();
 			btn_Login = new Button();
 			label1 = new Label();
-			textBox1 = new TextBox();
+			tb_dbName = new TextBox();
 			SuspendLayout();
 			// 
-			// tb_db
+			// tb_dbServer
 			// 
-			tb_db.Location = new Point(245, 74);
-			tb_db.Name = "tb_db";
-			tb_db.Size = new Size(309, 23);
-			tb_db.TabIndex = 0;
+			tb_dbServer.Location = new Point(245, 74);
+			tb_dbServer.Name = "tb_dbServer";
+			tb_dbServer.Size = new Size(309, 23);
+			tb_dbServer.TabIndex = 0;
 			// 
 			// lbl_db
 			// 
@@ -100,6 +100,7 @@
 			btn_Login.TabIndex = 6;
 			btn_Login.Text = "Войти";
 			btn_Login.UseVisualStyleBackColor = true;
+			btn_Login.Click += btn_Login_Click;
 			// 
 			// label1
 			// 
@@ -111,12 +112,12 @@
 			label1.TabIndex = 8;
 			label1.Text = "Название базы данных";
 			// 
-			// textBox1
+			// tb_dbName
 			// 
-			textBox1.Location = new Point(245, 149);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(309, 23);
-			textBox1.TabIndex = 7;
+			tb_dbName.Location = new Point(245, 149);
+			tb_dbName.Name = "tb_dbName";
+			tb_dbName.Size = new Size(309, 23);
+			tb_dbName.TabIndex = 7;
 			// 
 			// LoginForm
 			// 
@@ -124,14 +125,14 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
 			Controls.Add(label1);
-			Controls.Add(textBox1);
+			Controls.Add(tb_dbName);
 			Controls.Add(btn_Login);
 			Controls.Add(lbl_Password);
 			Controls.Add(tb_Password);
 			Controls.Add(lbl_Login);
 			Controls.Add(tb_Login);
 			Controls.Add(lbl_db);
-			Controls.Add(tb_db);
+			Controls.Add(tb_dbServer);
 			Name = "LoginForm";
 			Text = "Авторизация";
 			Load += Form1_Load;
@@ -141,7 +142,7 @@
 
 		#endregion
 
-		private TextBox tb_db;
+		private TextBox tb_dbServer;
 		private Label lbl_db;
 		private Label lbl_Login;
 		private TextBox tb_Login;
@@ -149,6 +150,6 @@
 		private TextBox tb_Password;
 		private Button btn_Login;
 		private Label label1;
-		private TextBox textBox1;
+		private TextBox tb_dbName;
 	}
 }
